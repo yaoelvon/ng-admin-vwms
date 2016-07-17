@@ -10,7 +10,7 @@
 
 使用包管理工具npm或bower获取ng-admin：
 
-```
+```sh
 npm install ng-admin —save
 # or
 bower install ng-admin —save
@@ -18,7 +18,7 @@ bower install ng-admin —save
 
 将ng-admin.min.css和ng-admin.min.js添加到HTML，增加一个<div ui-view>，然后配置这个admin：
 
-```
+```html
 <!doctype html>
 <html lang=“en”>
   <head>
