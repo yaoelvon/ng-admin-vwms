@@ -47,16 +47,17 @@ bower install ng-admin —save
 
 ## 入门（Getting Started）
 
-如果是初次接触ng-admin，请仔细阅读章节[入门](document_translation/入门.md)。
+如果是初次接触ng-admin，请仔细阅读章节[入门](文档翻译/入门.md)。
 
 ## 用法示例（Usage Examples）
 
-* You can find a simple configuration in the [blog admin demo](http://ng-admin.marmelab.com/#/dashboard) ([source](examples/blog/config.js)), where the entities are posts, comments, and tags.  The remote REST API is simulated in the browser, using [FakeRest](https://github.com/marmelab/FakeRest).
-* The [Posters Galore demo](http://marmelab.com/ng-admin-demo/) ([source](https://github.com/marmelab/ng-admin-demo)) is a more complete example of an e-commerce administration, with custom authentication, pages, directives and modules, all well organized via WebPack. The remote REST API is also simulated in the browser, using [FakeRest](https://github.com/marmelab/FakeRest).
+* 在[博客管理示例](http://ng-admin.marmelab.com/#/dashboard)([源码](examples/blog/config.js))中，你能看到一个简单的配置，里面的实体（entities)有发帖(posts)、评论（comments)和标签（tags）。同时使用FakeRest在浏览器中模拟后端REST API。
+* [Posters Galore demo](http://marmelab.com/ng-admin-demo/) ([source](https://github.com/marmelab/ng-admin-demo)) 是一个更完整的电子商务管理页面，包含自定义认证、页面、指令和模块，并使用WebPack组织良好。同时使用[FakeRest](https://github.com/marmelab/FakeRest)在浏览器中模拟后端REST API。
+
 
 ## 配置参考（Configuration Reference）
 
-An administration in ng-admin is made of one *application* containing several *entities*. Each entity has up to 5 *views*, and each view has many *fields*.
+在ng-admin中，一个管理工具是由包含多个*实体（entities)*的*应用*组成。每个实体（entity)拥有5种*视图*，每个视图拥有很多*字段（fields）*。
 
 ```
 application
@@ -74,131 +75,76 @@ application
            |-type
 ```
 
-See [Configuration API Reference](doc/Configuration-reference.md) dedicated chapter for more details.
+有关更多详细信息，请参阅[配置API参考](文档翻译/配置API参考.md)专用章节。
 
-**Tip**: You won't find the related classes in the ng-admin project. In fact, the admin configuration API exists as a standalone, framework-agnostic library, called [admin-config](https://github.com/marmelab/admin-config). Don't hesitate to browse the source of that library to learn more.
+**提示**:您在ng-admin项目中将找不到相关的类。 实际上，管理配置API有一个独立、框架无关的库，称为[admin-config](https://github.com/marmelab/admin-config)。 不要犹豫，浏览该库的代码以了解更多。
 
-## 关系（Relationships）
+## 关联（Relationships）
 
-Ng-admin supports relationships between entities in read and write views, and provides specialized field types for that: `reference`, `referenced_list`, `reference_many`, and `embedded_list`. The [Relationships Reference chapter](doc/Relationships.md) describes in more details which field type to use for which case.
+Ng-admin的读写视图实体之间支持‘关联’。它提供了特定的字段类型来实现这些‘关联’：`reference`, `referenced_list`, `reference_many`, 和 `embedded_list`。[关联参考章节](文档翻译/关联.md)中使用例子描述了更多的字段类型。
 
-Also, the Fields section of the [Configuration API Reference chapter](doc/Configuration-reference.md) has a list of all settings for each of these field types.
+另外，[配置API参考章节](文档翻译/配置API参考.md)的字段部分具有所有字段类型的列表。
 
 ## 菜单配置（Menu Configuration）
 
-By default, ng-admin creates a sidebar menu with one entry per entity. If you want to customize this sidebar (labels, icons, order, adding submenus, etc), you have to define menus manually.
+默认情况下，ng-admin创建一个侧边栏菜单，每个实体有一个条目。 如果要自定义侧边栏（标签，图标，顺序，添加子菜单等），则必须手动定义菜单。
 
-See [Menus Configuration](doc/Menus.md) dedicated chapter.
+请参见[菜单配置](文档翻译/菜单配置.md)专用章节。
 
-## 仪表盘/概览配置（Dashboard Configuration）
+## 仪表板配置（Dashboard Configuration）
 
-The home page of a ng-admin application is called the Dashboard. Use it to show important pieces of information to the end user, such as latest entries, or charts.
+ng-admin应用程序的主页被称为仪表板。 使用它向最终用户显示重要的信息，例如最新条目或图表。
 
-See [Dashboard Configuration](doc/Dashboard.md) dedicated chapter.
+请参阅[仪表板配置](文档翻译/仪表板配置.md)专用章节。
 
-## 自定义API映射（Customizing the API Mapping）
+## 定制API映射（Customizing the API Mapping）
 
-All HTTP requests made by ng-admin to your REST API are carried out by [Restangular](https://github.com/mgonto/restangular), which is like `$resource` on steroids.
+ng-admin对REST API所做的所有HTTP请求都是由[Restangular](https://github.com/mgonto/restangular)执行的。
 
-The REST specification doesn't provide enough detail to cover all requirements of an administration GUI. ng-admin makes some assumptions about how your API is designed. All of these assumptions can be overridden by way of [Restangular's request and response interceptors](https://github.com/mgonto/restangular#addresponseinterceptor).
+REST规范没有提供足够的详细信息来涵盖管理GUI的所有需求。 ng-admin对如何设计您的API进行了一些假设。 所有这些假设都可以通过[Restangular的请求和响应拦截器](https://github.com/mgonto/restangular#addresponseinterceptor)来覆盖。
 
-That means you don't need to adapt your API to ng-admin; ng-admin can adapt to any REST API, thanks to the flexibility of Restangular.
+这意味着你不需要为了ng-admin而调整你的API; ng-admin可以适应任何REST API，这要归功于Restangular的灵活性。
 
-See the [Customizing the API Mapping](doc/API-mapping.md) dedicated chapter.
+请参阅[定制API映射](文档翻译/定制API映射.md)专用章节。
 
-## 主题修改（Theming）
+## 主题（Theming）
 
-You can override pretty much all the HTML generated by ng-admin, at different levels.
+你可以在不同的级别覆盖几乎所有ng-admin生成的HTML。
 
-See the [Theming](doc/Theming.md) dedicated chapter.
+参见[主题](文档翻译/主题.md)专门章节。
 
-## 增加自定义页面（Adding Custom Pages）
+## 添加自定义页面（Adding Custom Pages）
 
-For each entity, ng-admin creates the necessary pages for Creating, Retrieving, Updating, and Deleting (CRUD) this entity. When you need to achieve more specific actions on an entity, you have to add a custom page - for instance a page asking for an email address to send a message to. How can you route to a specific page and display it in the ng-admin layout?
+对于每个实体，ng-admin创建用于'创建'，'检索'，'更新'和'删除'（CRUD）此实体的必要页面。 当您需要在实体上实现更特定的操作时，您必须添加自定义页面，例如要求向一个电子邮件地址发送消息的页面。 如何路由到特定页面并在ng-admin布局中显示它？
 
-See the [Adding Custom Pages](doc/Custom-pages.md) dedicated chapter.
+请参阅[添加自定义页面](文档翻译/添加自定义页面.md)专用章节。
 
-## 增加自定义类型（Adding Custom Types）
+## 添加自定义类型（Adding Custom Types）
 
-When you map a field between a REST API response and ng-admin, you give it a type. This type determines how the data is displayed and edited. It is very easy to customize existing ng-admin types and add new ones.
+当您在REST API的响应信息和ng-admin之间映射字段时，您需要为其指定类型。 这个类型会确定如何显示和编辑这些数据。 自定义现有的ng-admin类型和添加新的ng-admin类型非常容易。
 
-See the [Adding Custom Types](doc/Custom-types.md) dedicated chapter.
+请参阅[添加自定义类型](文档翻译/添加自定义页面.md)专用章节。
 
-## 为生产做准备（Getting Ready For Production）
+## 生产准备（Getting Ready For Production）
 
-To build the ng-admin source with the dependencies you need, and to get hints about performance boosters, head to the [Getting Ready For Production](doc/Production.md) dedicated chapter.
+要构建具有所需依赖关系的ng-admin源，并获得关于性能提升的提示，请参阅[生产准备](文档翻译/生产准备.md)专用章节。
 
 ## 信息（News）
 
-Follow the [marmelab blog](http://marmelab.com/blog/) for news about ng-admin (tutorials, plugins, new releases, etc).
+关于ng-admin（教程，插件，新版本等）的新闻，请按照[marmelab博客](http://marmelab.com/blog/)。
 
-You should also watch the [ng-admin release page on GitHub](https://github.com/marmelab/ng-admin/releases) for announcements on new releases, and complete changelog.
+您还应该观看[gitHub上的ng-admin发布页面](https://github.com/marmelab/ng-admin/releases)以获取有关新发布的公告以及完成更新日志。
 
 ## 支持（Support）
 
-Ng-admin is an open-source project, with a community getting larger every  day. You will get help by asking politely in any the following channels:
+Ng-admin是一个开源项目，并且社区越来越大。 您可以通过在以下任何渠道询求帮助：
 
 * [StackOverflow](http://stackoverflow.com/questions/tagged/ng-admin)
-* [Gitter (live chat)](https://gitter.im/marmelab/ng-admin) [![Join the chat at https://gitter.im/marmelab/ng-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/marmelab/ng-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+* Gitter (live chat)](https://gitter.im/marmelab/ng-admin) [![Join the chat at https://gitter.im/marmelab/ng-admin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/marmelab/ng-admin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Please give as much context as possible, including and admin configuration snippet, and the response from the API you're mapping.
+请尽可能多地提供上下文，包括和管理配置的代码段，以及您映射的API的响应。
 
 ## 贡献（Contributing）
 
-Your feedback about the usage of ng-admin in your specific context is valuable, don't hesitate to [open GitHub Issues](https://github.com/marmelab/ng-admin/issues) for any problem or question you may have.
+在您的特定环境中的使用ng-admin的反馈是有价值的，不要犹豫[打开GitHub的issue](https://github.com/marmelab/ng-admin/issues)提出任何你想问的问题。
 
-All contributions are welcome: please send us a Pull Request for any new feature / bug fix in your fork that you consider worth giving back.
-
-Also, if you have some experience with ng-admin, please answer questions from newcomers in any of the support channels (see above).
-
-Install npm dependencies (for tests) by calling the `install` target:
-
-```sh
-make install
-```
-
-### 运行一个例子应用（Running the example app）
-
-To test your changes, run the example app, which is bundled with a sample REST api, by calling:
-
-```sh
-make run
-```
-
-Then, connect to `http://localhost:8000/` to browse the admin app. This task uses webpack-dev-server, which means that the browser will reload the page as soon as one file in the source is updated. This makes the blog app our preferred live testing environment.
-
-### 测试（Testing）
-
-ng-admin has unit tests (powered by karma) and end to end tests (powered by protractor). Launch the entire tests suite by calling:
-
-```sh
-make test
-```
-
-**Tip:** If you are working on Karma tests, you can prevent from relaunching the whole process by disabling single-run:
-
-```
-KARMA_SINGLE_RUN=false ./node_modules/.bin/grunt karma:unit
-```
-
-### 发布（Releasing）
-
-Before releasing a new version, concatenate and minify the JS and CSS sources into minified scripts with:
-
-```sh
-make build
-git add build
-git commit -m 'update built files'
-git push origin master
-git tag vx.x.x
-# publish to bower
-git push origin --tags
-# publish to npm
-npm publish
-```
-
-**Tip**: Don't commit built files in Pull Requests, it forces rebases on other PRs. The core team will take care of regularily updating these built files.
-
-## 版权申明（License）
-
-ng-admin is licensed under the [MIT Licence](LICENSE), and sponsored by [marmelab](http://marmelab.com).
