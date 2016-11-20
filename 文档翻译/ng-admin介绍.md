@@ -47,7 +47,7 @@ bower install ng-admin —save
 
 ## 入门（Getting Started）
 
-如果是初次接触ng-admin，请仔细阅读章节[入门](文档翻译/入门.md)。
+如果是初次接触ng-admin，请仔细阅读章节[入门](入门.md)。
 
 ## 用法示例（Usage Examples）
 
@@ -75,27 +75,27 @@ application
            |-type
 ```
 
-有关更多详细信息，请参阅[配置API参考](文档翻译/配置API参考.md)专用章节。
+有关更多详细信息，请参阅[配置API参考](配置API参考.md)专用章节。
 
 **提示**:您在ng-admin项目中将找不到相关的类。 实际上，管理配置API有一个独立、框架无关的库，称为[admin-config](https://github.com/marmelab/admin-config)。 不要犹豫，浏览该库的代码以了解更多。
 
 ## 关联（Relationships）
 
-Ng-admin的读写视图实体之间支持‘关联’。它提供了特定的字段类型来实现这些‘关联’：`reference`, `referenced_list`, `reference_many`, 和 `embedded_list`。[关联参考章节](文档翻译/关联.md)中使用例子描述了更多的字段类型。
+Ng-admin的读写视图实体之间支持‘关联’。它提供了特定的字段类型来实现这些‘关联’：`reference`, `referenced_list`, `reference_many`, 和 `embedded_list`。[关联参考章节](关联.md)中使用例子描述了更多的字段类型。
 
-另外，[配置API参考章节](文档翻译/配置API参考.md)的字段部分具有所有字段类型的列表。
+另外，[配置API参考章节](配置API参考.md)的字段部分具有所有字段类型的列表。
 
 ## 菜单配置（Menu Configuration）
 
 默认情况下，ng-admin创建一个侧边栏菜单，每个实体有一个条目。 如果要自定义侧边栏（标签，图标，顺序，添加子菜单等），则必须手动定义菜单。
 
-请参见[菜单配置](文档翻译/菜单配置.md)专用章节。
+请参见[菜单配置](菜单配置.md)专用章节。
 
 ## 仪表板配置（Dashboard Configuration）
 
 ng-admin应用程序的主页被称为仪表板。 使用它向最终用户显示重要的信息，例如最新条目或图表。
 
-请参阅[仪表板配置](文档翻译/仪表板配置.md)专用章节。
+请参阅[仪表板配置](仪表板配置.md)专用章节。
 
 ## 定制API映射（Customizing the API Mapping）
 
@@ -105,29 +105,29 @@ REST规范没有提供足够的详细信息来涵盖管理GUI的所有需求。 
 
 这意味着你不需要为了ng-admin而调整你的API; ng-admin可以适应任何REST API，这要归功于Restangular的灵活性。
 
-请参阅[定制API映射](文档翻译/定制API映射.md)专用章节。
+请参阅[定制API映射](定制API映射.md)专用章节。
 
 ## 主题（Theming）
 
 你可以在不同的级别覆盖几乎所有ng-admin生成的HTML。
 
-参见[主题](文档翻译/主题.md)专门章节。
+参见[主题](主题.md)专门章节。
 
 ## 添加自定义页面（Adding Custom Pages）
 
 对于每个实体，ng-admin创建用于'创建'，'检索'，'更新'和'删除'（CRUD）此实体的必要页面。 当您需要在实体上实现更特定的操作时，您必须添加自定义页面，例如要求向一个电子邮件地址发送消息的页面。 如何路由到特定页面并在ng-admin布局中显示它？
 
-请参阅[添加自定义页面](文档翻译/添加自定义页面.md)专用章节。
+请参阅[添加自定义页面](添加自定义页面.md)专用章节。
 
 ## 添加自定义类型（Adding Custom Types）
 
 当您在REST API的响应信息和ng-admin之间映射字段时，您需要为其指定类型。 这个类型会确定如何显示和编辑这些数据。 自定义现有的ng-admin类型和添加新的ng-admin类型非常容易。
 
-请参阅[添加自定义类型](文档翻译/添加自定义页面.md)专用章节。
+请参阅[添加自定义类型](添加自定义页面.md)专用章节。
 
 ## 生产准备（Getting Ready For Production）
 
-要构建具有所需依赖关系的ng-admin源，并获得关于性能提升的提示，请参阅[生产准备](文档翻译/生产准备.md)专用章节。
+要构建具有所需依赖关系的ng-admin源，并获得关于性能提升的提示，请参阅[生产准备](生产准备.md)专用章节。
 
 ## 信息（News）
 
